@@ -2,7 +2,6 @@
 R code for data transformation of IPEDS institutional characteristics and awards/degrees conferred for 2019-2023
 
 Written by: Julie Kellner
-
 Last modified: August 27, 2024
 
 This R code will download the past 5 years of HD, IC and C_A datafiles from IPEDS
