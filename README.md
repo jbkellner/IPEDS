@@ -5,20 +5,6 @@ Written by: Julie Kellner
 
 Last modified: August 27, 2024
 
-This R code will download the past 5 years of HD, IC and C_A datafiles from IPEDS
-
-It will also download the frequency and varlist info from the dictionary for those years
-
-The code then appends to the datafiles the plain language valuelabel
-
-And combines all years together with a column for the year and original datafile
-
-Output saved includes original downloaded files
-
-And 5 new files for all 5 years, hd, ic, c_a, Frequencies, varlist
-
-This code was tested and works on datafiles from 2019-2023
-
 Original Data Source:
 
 Institutional Characteristics All Years
