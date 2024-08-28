@@ -6,6 +6,10 @@
 
 # This R code will download the past 5 years of HD, IC and C_A datafiles from IPEDS
 # It will also download the frequency and varlist info from the dictionary for those years
+# The code uses the most recent version of the data available,
+# Which could be the provisional version if the revised/final version has not been released yet.
+# More details of the version releases are here: 
+# https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx?gotoReportId=7&fromIpeds=true&sid=7184165d-b0de-4b97-8490-f612cc0007f4&rtid=7
 
 # The code then appends to the datafiles the plain language valuelabel
 # And combines all years together with a column for the year and original datafile
