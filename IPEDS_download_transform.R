@@ -37,6 +37,7 @@ library(utils)
 library(readr)
 library(readxl)
 library(tidyverse)
+library(RCurl)
 
 # Make directory to store downloaded files
 main_dir <- "~/Downloads"
@@ -57,28 +58,36 @@ for (i in 1:number_of_pastyears) {
 
     filename <- paste0(files[ii], current_year - i, ".zip")
     url <- paste0("https://nces.ed.gov/ipeds/datacenter/data/", filename)
+    if (url.exists(url) == TRUE) {
     GET(url, write_disk(filename, overwrite=TRUE))
     unzip(filename)
     unlink(filename)
+    }
 
     filename <- paste0(files[ii], current_year - i, "_Dict.zip")
     url <- paste0("https://nces.ed.gov/ipeds/datacenter/data/", filename)
+    if (url.exists(url) == TRUE) {
     GET(url, write_disk(filename, overwrite=TRUE))
     unzip(filename)
     unlink(filename)
+    }
   }
   
   filename <- paste0("C", current_year - i, "_A.zip")
   url <- paste0("https://nces.ed.gov/ipeds/datacenter/data/", filename)
+  if (url.exists(url) == TRUE) {
   GET(url, write_disk(filename, overwrite=TRUE))
   unzip(filename)
   unlink(filename)
+  }
   
   filename <- paste0("C", current_year - i, "_A_Dict.zip")
   url <- paste0("https://nces.ed.gov/ipeds/datacenter/data/", filename)
+  if (url.exists(url) == TRUE) {
   GET(url, write_disk(filename, overwrite=TRUE))
   unzip(filename)
   unlink(filename)
+  }
 }
 rm(i,ii,filename,url,files)
 
